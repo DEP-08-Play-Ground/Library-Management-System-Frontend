@@ -1,0 +1,23 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "parcel build",
+    "start": "parcel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEP-08-Play-Ground/Library-Management-System-Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DEP-08-Play-Ground/Library-Management-System-Frontend/issues"
+  },
+  "homepage": "https://github.com/DEP-08-Play-Ground/Library-Management-System-Frontend#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
