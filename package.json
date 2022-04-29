@@ -20,5 +20,8 @@
   "homepage": "https://github.com/DEP-08-Play-Ground/Library-Management-System-Frontend#readme",
   "devDependencies": {
     "parcel": "^2.5.0"
+  },
+  "dependencies": {
+    "admin-lte": "^3.2.0"
   }
 }
