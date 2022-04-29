@@ -1,1 +1,1 @@
-console.log("working");
+let navUItemList = document.querySelectorAll(".sidebar>.nav-item");
