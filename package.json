@@ -2,9 +2,12 @@
   "name": "front-end",
   "version": "1.0.0",
   "source": [
-    "src/index.html","src/issue-books.html","src/manage-books.html","src/return-books.html","src/settings.html"
+    "src/index.html",
+    "src/issue-books.html",
+    "src/manage-books.html",
+    "src/return-books.html",
+    "src/settings.html"
   ],
-
   "scripts": {
     "watch": "tsc --watch",
     "build": "parcel build",
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/DEP-08-Play-Ground/Library-Management-System-Frontend#readme",
   "devDependencies": {
+    "@types/node": "^17.0.30",
     "parcel": "^2.5.0"
   },
   "dependencies": {
