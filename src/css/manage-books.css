@@ -45,3 +45,8 @@
     width: 200px;
     height: 100px;
 }
+#image-preview{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

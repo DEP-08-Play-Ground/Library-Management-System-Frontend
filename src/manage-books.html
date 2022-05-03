@@ -25,6 +25,7 @@
   <!-- AdminLTE App -->
   <script defer type="module" src="/node_modules/admin-lte/dist/js/adminlte.js"></script>
   <script defer src="./ts/main.ts"></script>
+  <script defer src="./ts/page/manage-books.ts"></script>
 
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -168,32 +169,32 @@
           <div class="card card-primary">
             <div class="card-header">
               <h3 class="card-title">Book Details</h3>
-              <button type="button" id="btn-success" class="btn btn-block bg-gradient-success btn-lg">Success</button>
+              <button type="button" id="btn-new" class="btn btn-block bg-gradient-success btn-lg">+New</button>
             </div>
-            <form>
+            <form id="frm-books">
               <div class="card-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Book Id</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <label for="txt-id">Book Id</label>
+                  <input type="text" class="form-control" id="txt-id" placeholder="Enter Book ID">
                 </div>
                 <div class="form-group">
                   <label for="txt-name">Name</label>
-                  <input type="password" class="form-control" id="txt-name" placeholder="Enter the Name">
+                  <input type="text" class="form-control" id="txt-name" placeholder="Enter the Name">
                 </div>
                 <div class="form-group">
                   <label for="txt-author">Author</label>
-                  <input type="password" class="form-control" id="txt-author" placeholder="Enter the Author">
+                  <input type="text" class="form-control" id="txt-author" placeholder="Enter the Author">
                 </div>
                 <div class="form-group">
                   <label for="txt-bookType">Book Type</label>
-                  <input type="password" class="form-control" id="txt-bookType" placeholder="Enter the Book Type">
+                  <input type="text" class="form-control" id="txt-bookType" placeholder="Enter the Book Type">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputFile">Preview</label>
+                  <label for="txt-preview">Preview</label>
                   <div class="input-group">
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="exampleInputFile">
-                      <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      <input type="file" accept="image/*" class="custom-file-input" id="txt-preview">
+                      <label id="lbl-preview" class="custom-file-label" for="txt-preview">Choose file</label>
                     </div>
                   </div>
                 </div>
