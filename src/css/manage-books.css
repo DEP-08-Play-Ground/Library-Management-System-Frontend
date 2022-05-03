@@ -1,0 +1,47 @@
+#btn-success{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    right: 1%;
+    bottom: 10px;
+}
+
+.card-header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#exampleInputFile:hover,#lbl-upload:hover{
+    cursor: pointer;
+}
+#lbl-upload:hover{
+    background-color: navy;
+}
+#image-preview{
+    height: 200px;
+    width: 180px;
+    border: 2px solid brown;
+}
+.preview-wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#btn-remove{
+    position: absolute;
+    left: 38%;
+    align-self: center;
+}
+.container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.pagination{
+    justify-content: right;
+}
+.tbl-image{
+    display: block;
+    width: 200px;
+    height: 100px;
+}
