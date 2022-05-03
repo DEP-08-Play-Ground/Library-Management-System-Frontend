@@ -31,7 +31,6 @@ txtPreview.addEventListener('input',()=>{
 btnNew.addEventListener('click',()=>{
     setEnableForm();
     frmBook.reset();
-    txtId.focus();
     lblPreview.innerText='';
     divThumbnail.style.backgroundImage='';
     btnRemove.disabled=true;
@@ -56,6 +55,13 @@ frmBook.addEventListener('submit',(e)=>{
 
     /*Todo: send the data to the backend*/
 
+});
+
+frmBook.addEventListener('reset',(e)=>{
+    const inputElms =[txtId,txtName,txtAuthor,txtBookType];
+    inputElms.forEach(value => value.classList.remove('is-invalid','is-valid'));
+    inputElms[0].focus();
+    btnRemove.click();
 });
 
 txtId.addEventListener('input',checkValidity);
@@ -91,5 +97,7 @@ function checkValidity(e:Event){
         checkValidityOfBookType() ? txtBookType.classList.add('is-valid'):txtBookType.classList.add('is-invalid');
     }
 }
+
+
 
 
