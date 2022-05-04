@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +26,8 @@
   <script defer type="module" src="/node_modules/admin-lte/dist/js/adminlte.js"></script>
   <script defer src="./ts/main.ts"></script>
   <script defer src="./ts/page/manage-books.ts"></script>
+  <script defer src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
 
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -50,7 +52,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="/src/image/library.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-bold">Library-Management-System</span>
+      <span class="brand-text font-weight-bold">Library</span>
     </a>
 
     <!-- Sidebar -->
@@ -204,27 +206,59 @@
                 </div>
               </div>
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="reset" class="btn btn-primary">Reset</button>
+                <button type="submit" class="btn-save btn btn-primary">Save</button>
+                <button type="reset" class="btn-clear btn btn-primary">Clear</button>
               </div>
             </form>
           </div>
         <!-- /.row -->
         </div>
         <div class="col-md-6">
-          <table id="example2" class="table table-bordered table-hover">
-            <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Name</th>
-              <th>Author</th>
-              <th>Book Type</th>
-              <th>Preview</th>
-              <th>Option</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <tbody>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div></br>
           <ul class="pagination">
             <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
             <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>

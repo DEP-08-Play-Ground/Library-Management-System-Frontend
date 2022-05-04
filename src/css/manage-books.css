@@ -50,3 +50,32 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#btn-new{
+    width: 200px;
+    position: absolute;
+    right: 2%;
+}
+
+tbody tr{
+    cursor: pointer;
+}
+
+tbody tr td:last-child{
+    width: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+tbody tr td:last-child:hover{
+    color: red;
+}
+
+.book-preview{
+    width: 60px;
+}
+
+.selected{
+    background-color: cornflowerblue !important;
+}
