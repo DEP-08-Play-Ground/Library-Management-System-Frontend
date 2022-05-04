@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 <html lang="en">
+=======
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+>>>>>>> Stashed changes
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +28,12 @@
   <!-- AdminLTE App -->
   <script defer type="module" src="/node_modules/admin-lte/dist/js/adminlte.js"></script>
   <script defer src="./ts/main.ts"></script>
+<<<<<<< Updated upstream
+=======
+  <script defer src="./ts/page/manage-books.ts"></script>
+  <script defer src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+
+>>>>>>> Stashed changes
 
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -48,7 +58,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="/src/image/library.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-bold">Library-Management-System</span>
+      <span class="brand-text font-weight-bold">Library</span>
     </a>
 
     <!-- Sidebar -->
@@ -161,9 +171,114 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+<<<<<<< Updated upstream
         <!-- Main row -->
         <div class="row">
 
+=======
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Book Details</h3>
+              <button type="button" id="btn-new" class="btn btn-block bg-gradient-success btn-lg">+New</button>
+            </div>
+            <form id="frm-books">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="txt-id">Book Id</label>
+                  <input type="text" class="form-control" id="txt-id" placeholder="Enter Book ID">
+                </div>
+                <div class="form-group">
+                  <label for="txt-name">Name</label>
+                  <input type="text" class="form-control" id="txt-name" placeholder="Enter the Name">
+                </div>
+                <div class="form-group">
+                  <label for="txt-author">Author</label>
+                  <input type="text" class="form-control" id="txt-author" placeholder="Enter the Author">
+                </div>
+                <div class="form-group">
+                  <label for="txt-bookType">Book Type</label>
+                  <input type="text" class="form-control" id="txt-bookType" placeholder="Enter the Book Type">
+                </div>
+                <div class="form-group">
+                  <label for="txt-preview">Preview</label>
+                  <div class="input-group">
+                    <div class="custom-file">
+                      <input type="file" accept="image/*" class="custom-file-input" id="txt-preview">
+                      <label id="lbl-preview" class="custom-file-label" for="txt-preview">Choose file</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="preview-wrapper">
+                  <div id="image-preview" class="col-4"></div>
+                  <button id="btn-remove" type="button" class="btn btn-danger">Remove</button>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button type="submit" class="btn-save btn btn-primary">Save</button>
+                <button type="reset" class="btn-clear btn btn-primary">Clear</button>
+              </div>
+            </form>
+          </div>
+        <!-- /.row -->
+        </div>
+        <div class="col-md-6">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <tbody>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><img class="book-preview"
+                         src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1392593226l/12545373.jpg"
+                         alt="preview"></td>
+                <td>
+                  <div class="id">B001</div>
+                  <div class="book-name text-bold">Java 8 Complete Reference</div>
+                  <div class="book-author">James Gosling</div>
+                </td>
+                <td>
+                  <i class="fas fa-trash"></i>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div></br>
+          <ul class="pagination">
+            <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+            <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+            <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+            <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+            <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+            <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+            <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
+            <li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+          </ul>
+>>>>>>> Stashed changes
         </div>
         <!-- /.row -->
       </div><!--/. container-fluid -->

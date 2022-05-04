@@ -29,6 +29,8 @@
     "parcel": "^2.5.0"
   },
   "dependencies": {
-    "admin-lte": "^3.2.0"
+    "admin-lte": "^3.2.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.10"
   }
 }
