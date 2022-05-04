@@ -5,9 +5,11 @@ const txtName =document.querySelector<HTMLInputElement>('#txt-name')!;
 const txtAuthor =document.querySelector<HTMLInputElement>('#txt-author')!;
 const txtBookType =document.querySelector<HTMLInputElement>('#txt-bookType')!;
 const txtPreview =document.querySelector<HTMLInputElement>('#txt-preview')!;
-const divThumbnail =document.querySelector<HTMLInputElement>('#image-preview')!;
-const lblPreview =document.querySelector<HTMLInputElement>('#lbl-preview')!;
-const btnRemove =document.querySelector<HTMLInputElement>('#btn-remove')!;
+const divThumbnail =document.querySelector<HTMLDivElement>('#image-preview')!;
+const lblPreview =document.querySelector<HTMLLabelElement>('#lbl-preview')!;
+const btnRemove =document.querySelector<HTMLButtonElement>('#btn-remove')!;
+const pagination =document.querySelector<HTMLUListElement>('.pagination')!;
+
 let blobUrl:null|string = null;
 
 setEnableForm(false);
@@ -98,6 +100,45 @@ function checkValidity(e:Event){
     }
 }
 
+const pageSize=5;
+const booksCount=55;
+let activePage = 1;
 
+initPagination(1);
 
+function initPagination(page: number = 1){
+    let pages = Math.ceil(booksCount / pageSize);
+    if (page < 1 || page > pages ) page = pages;
+    activePage = page;
+    let end = page + 4;
+    let start = page - 5;
+    if (end > pages){
+        start -= (end - pages);
+        end = pages;
+    }
+    if (start < 1){
+        end += (1 - start);
+        if (end > pages) end = pages;
+        start = 1;
+    }
+    let html = `<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>`;
+    for (let i = start; i <= end; i++) {
+        html += `<li class="page-item ${i===page?'active':''}"><a class="page-link" href="#">${i}</a></li>`
+    }
+    html += `<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>`;
+    pagination.innerHTML = html;
+}
 
+pagination.addEventListener('click', (e)=> {
+    let elm = (e.target as HTMLElement);
+    if (elm.tagName === 'A'){
+        if (elm.innerText === '«'){
+            initPagination(--activePage);
+        }else if (elm.innerText === '»'){
+            initPagination(++activePage);
+        }else{
+            initPagination(+elm.innerText);
+        }
+        e.stopPropagation();
+    }
+});
